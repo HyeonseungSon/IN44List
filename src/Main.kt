@@ -28,6 +28,13 @@ List Method
  - remove (Object) : 해당객체를 제거합니다.
  - removeAt (Index) : 해당 Index 를 객체를 제거합니다.
  - set (Index, Objec) : 주어진 Index 에 객체를 덮어 씌웁니다.
+
+List => Set (변경)
+ - toSet () : 불변형 Set 으로 변경합니다.
+ - toMutableSet () : 가변형 Set 으로 변환합니다.
+ * Set 의 특성에 따라 중복된 객체는 제거됩니다. *
+ * List 의 Index 순서를 보장받을 수 없습니다. *
+
  */
 
 fun main() {
