@@ -123,5 +123,4 @@ fun main() {
     // List Type 불변형으로 변경
     val list200 = list100.toList()
     // list200.add(300)
-
 }
