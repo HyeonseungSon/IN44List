@@ -29,6 +29,10 @@ List Method
  - removeAt (Index) : 해당 Index 를 객체를 제거합니다.
  - set (Index, Objec) : 주어진 Index 에 객체를 덮어 씌웁니다.
 
+Set => List (변경)
+ - toList () : 불변형 List 로 변경합니다.
+ - toMutable () : 가변형 List 로 변경합니다.
+
 List => Set (변경)
  - toSet () : 불변형 Set 으로 변경합니다.
  - toMutableSet () : 가변형 Set 으로 변환합니다.
