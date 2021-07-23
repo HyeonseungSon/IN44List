@@ -1,3 +1,5 @@
+import kotlin.reflect.KClass
+
 /*
 Collection
  - 자료 구조에 나오는 다양한 Data 관리 기법을 사용할 수 있도록 제공하고 있는 Library
@@ -101,6 +103,13 @@ fun main() {
     list3.remove(100)
     println("list3 : $list3")
 
+    println("----- test -----")
+    val test3: KClass<*> = list3::class
+    val test4:Class<*> = list3::class.java
+    println("test1 : $test3")
+    println("test2 : $test3")
+    println("----- test -----")
+
     list3.removeAll(listOf(200, 300))
     println("list3 : $list3")
 
@@ -123,4 +132,25 @@ fun main() {
     // List Type 불변형으로 변경
     val list200 = list100.toList()
     // list200.add(300)
+
+    println("-----------------------------")
+
+    val list9 = mutableListOf(100, 200, 300, 100, 200)
+    println("list9 : $list9")
+    val test1: KClass<*> = list9::class
+    val test2:Class<*> = list9::class.java
+    println("test1 : $test1")
+    println("test2 : $test2")
+    list9.remove(100) // 값 100 인 요소 한 개 제거 => list9 : [200, 300, 100, 200]
+    println("list9 : $list9")
+    list9.remove(100) // 값 100 요소 한 개 추가 제거 => ist9 : [200, 300, 200]
+    println("list9 : $list9")
+
+    list9.addAll(listOf(100, 100))
+    println("list9 : $list9")
+    list9.removeAll(listOf(100))
+    println("list9 : $list9") // => list9 : [200, 300, 200]
+    list9.removeAll(listOf(100, 200))
+    println("list9 : $list9") // => list9 : [300]
+
 }
